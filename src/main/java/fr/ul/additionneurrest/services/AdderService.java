@@ -6,8 +6,8 @@ import java.util.Random;
 
 @Service
 public class AdderService {
-    private Random rand = new Random();
-    private int num = rand.nextInt(101);//rand entre 0 et 100
+    //private Random rand = new Random();
+    private int num = 10;//rand.nextInt(101);//rand entre 0 et 100
 
     public void baseNum(int base){
         this.num = base;
