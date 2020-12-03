@@ -1,0 +1,4 @@
+langage: java
+jdk: oraclejdk-15
+after_deploy:
+  - echo "done deploying"
