@@ -1,4 +1,13 @@
 langage: java
 jdk: oraclejdk-15
+addons:
+  sonarcloud:
+    organization: "damienlevy"
+    token:
+      secure: "fcv8sXsLXsmpgc93zIm1V/xZDeVYvovqtVpHTpw+h2TJzv+pCnI8Uhurbp6GsIeGHBWNdUVz77o8qj6Okz0fL9Fpgvel0KGPLaEhmGCIlR6j3Q0Oqwmvkq8/9nkVZO5AGhxbpd6I5ISAV1G4tFLwtXogbVRKhJr1oMsvAsICKHt7cdGUQhyH7GqtcahUTYTN57cbSPHn/oELPujsyJgqcS7rqam7jdoMAOywdoRrIl+oLRdtL8/yx6wbQtzqCo2fiN+VmqdM1nvORHYUFvDwYJtrh2LeWrR/vHUDJGg8iu/AC+pLJmxmagKvSu358kyD6F3RlaNJ6WNcjSoXD4LHKVXkNbpdqDyBZhho8SAuw7fI9r8xPjLCW+Fjvpler+UeWwcUVoITf7v+A8A8/87yNqWA9tfEf2LBBopcn01BWiUAtXNKg/b5Wb42bmNByvgbukc8EZpuXW70HXpxtrcUcWyDItjW2w9/JaHn0IhPF8CDjtaCsXgA6UYQ36eDGdMAfcG5xI8v98D5WwR8pIp2nlhQmhHxXSBZkbfOy+nYp+z/rjIhINC0NCJDUeAUClofuf+i/obwaNagyzrxm2qDbQgAPXY3fegQfvKHzpmXv3fV92K6DzcwqltoyLkEGWxiumLj7MhtuvbsWSNw2lvcS9EJx5d308ChLvbc4zLd0/M="
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 after_deploy:
   - echo "done deploying"
