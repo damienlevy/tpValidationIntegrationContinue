@@ -33,8 +33,7 @@ public class AdderControler {
     }
     @GetMapping("/random")
     public int random(){
-        Random r = new Random();
-        adderService.baseNum(r.nextInt(101));
+        adderService.random();
         return adderService.currentBase();
     }
 

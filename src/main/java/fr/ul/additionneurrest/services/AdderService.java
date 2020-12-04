@@ -12,6 +12,11 @@ public class AdderService {
     public void baseNum(int base){
         this.num = base;
     }
+    public void random(){
+        Random r = new Random();
+        baseNum(r.nextInt(101));
+    }
+
     public int currentBase(){
         return num;
 

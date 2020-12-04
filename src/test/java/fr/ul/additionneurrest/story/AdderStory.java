@@ -1,13 +1,15 @@
 package fr.ul.additionneurrest.story;
 
+import fr.ul.additionneurrest.serenity.*;
 import net.serenitybdd.junit.spring.integration.SpringIntegrationSerenityRunner;
+
 import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import fr.ul.additionneurrest.serenity.AdderServiceSteps;
 
 @RunWith(SpringIntegrationSerenityRunner.class)
-public class AdderStoryOLD {
+public class AdderStory {
+
     @Steps
     private AdderServiceSteps adderSteps;
 
@@ -17,6 +19,4 @@ public class AdderStoryOLD {
         adderSteps.whenAdd();
         adderSteps.summedUp();
     }
-
-
 }
