@@ -16,9 +16,6 @@ class AdditionneurrestApplicationTests {
         when().get("/adder/current").then().assertThat().body(equalTo("5"));
     }
 
-    @Test
-    void rand(){
-        //when().get("/adder/random").then().assertThat().body()
-    }
+
 
 }

@@ -1,16 +1,16 @@
 package fr.ul.additionneurrest.serenity;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
+import org.jbehave.core.annotations.Given;
+import org.jbehave.core.annotations.Then;
+import org.jbehave.core.annotations.When;
 
 public class AdderjBStory {
     @Steps
     AdderRestSteps restSteps;
 
     @Given("a number")
-    public void givenANumber() throws Exception {
+    public void givenANumber() {
         restSteps.givenCurrentNumber();
     }
 

@@ -26,6 +26,12 @@ public class AdderControler {
         return adderService.add(num);
     }
 
+    @PostMapping(value = "/accumulate")
+    public int accumulate(@RequestParam int num){
+        return adderService.accumulate(num);
+    }
+
+
     @PostMapping(value = "/changeBase")
     public int changeBase(@RequestParam int base){
         adderService.baseNum(base);
